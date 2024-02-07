@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tailwind CSS Grid Example</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="flex justify-between h-24 bg-red-800 items-center text-slate-200 md:text-3xl  text-xl ">
+            <div class="flex-1 ml-12" id="nazwa">
+                <button id="pizza" class="block">PIZZERIA </button>
+            </div>
+            <div class="flex-1 flex justify-end mr-12 gap-10" id="nazwa-2">
+                <button id="menu" class="ml-16 sm:block hidden">MENU</button>
+                <button class="ml-16 sm:block hidden">KONTAKT</button>
+                <button id="galeria" class="ml-16 sm:block hidden">GALERIA</button>
+                <select class="bg-red-800 border-none sm:hidden block w-24 h-12 rounded-xl focus:outline-none">
+                    <option id="PIZZERIA">PIZZERIA</option>
+                    <option id="menu">MENU</option>
+                    <option id="kontakt">KONTAKT</option>
+                    <option id="galeria">GALERIA</option>
+                </select>
+            </div>
+        </div>
+        <div class="text-4xl flex w-full justify-center items-center h-24"><h1 class="block">PIZZERIA PAPAS</h1></div>
+        <div class="grid gap-10 md:grid-cols-4 grid-cols-1  mr-12 ml-12 sm:grid-rows-2 grid-rows-4 items-center" id="content">
+            <img class="xl:col-start-2 md:col-start-1 block rounded-xl md:col-span-2 xl:col-span-1" src="pizza.jpg">
+            <div class="md:col-start-3 md:col-span-2 xl:col-span-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vel ullam recusandae fuga laudantium ducimus placeat tempore odio dolores facere. Accusamus rem non cumque totam ex cupiditate vero iusto aliquam. Sunt, maxime nisi vel consequuntur cupiditate tempore minima in ratione ex rerum velit perferendis, reiciendis natus vitae ea aspernatur eos.</div>
+            <div class="xl:col-start-2 md:col-start-1 md:col-span-2 xl:col-span-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vel ullam recusandae fuga laudantium ducimus placeat tempore odio dolores facere. Accusamus rem non cumque totam ex cupiditate vero iusto aliquam. Sunt, maxime nisi vel consequuntur cupiditate tempore minima in ratione ex rerum velit perferendis, reiciendis natus vitae ea aspernatur eos.</div>
+            <img class="xl:col-start-3 md:col-start-3 block rounded-xl md:col-span-2 xl:col-span-1" src="pizza.jpg">
+        </div>
+        <div id="content2">
+            
+        </div>
+        <div id="content3">
+            <div id="zdjecia">
+                
+            </div>
+        </div>
+        <footer>
+            <div class="text-white bg-red-800 mt-12 sm:text-4xl flex w-full justify-evenly items-center h-24 text-xl"><h1 class="block">PAPAS</h1><h1 class="block">PAPAS</h1><h1 class="block">PAPAS</h1><h1 class="block">PAPAS</h1><h1 class="block">PAPAS</h1></div>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

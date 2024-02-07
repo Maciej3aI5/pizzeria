@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Protest-Riot';
+    src: local('Protest-Riot'), url('ProtestRiot-Regular.ttf') format('truetype');
+}
+*
+{
+    font-family: 'Protest-Riot';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#content
+{
+    min-height: 300px;
+}
+#content2
+{
+    display: none;
+}
+#content3
+{
+    display: none;
+}
+.danie
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: 80px;
+    font-size: 1.5rem;
+    width:80%;
+    margin: auto;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+}
+.nazwa
+{
+    border: 4px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.opis
+{
+    border: 4px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    justify-items: center;
+    align-items: center;
+    border-right:4px solid black;
+}
+.tresc
+{
+    font-size: 1rem;
+    border-right:4px solid black;
+}
+#zdjecia
+{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-gap:50px;  
+    min-height: 300px;
+}
+.rozmiar1
+{
+
+}
+.rozmiar2
+{
+    grid-column:span 2;
+    grid-row:span 2;
+}
+@media (max-width: 767px)
+{
+    #content2{
+        font-size: 1rem;
+    }
+    .nazwa{
+        font-size: 1.2rem;
+    }
+}
+p
+{
+    display: block;
+    text-align: center;
+}
