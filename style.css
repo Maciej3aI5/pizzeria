@@ -75,13 +75,32 @@
     grid-column:span 2;
     grid-row:span 2;
 }
-@media (max-width: 767px)
+@media (max-width: 1200px)
 {
     #content2{
         font-size: 1rem;
     }
     .nazwa{
         font-size: 1.2rem;
+    }
+    #zdjecia
+    {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+    }
+}
+@media (max-width: 768px)
+{
+    #content2{
+        font-size: 1rem;
+    }
+    .nazwa{
+        font-size: 1.2rem;
+    }
+    #zdjecia
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
 p
