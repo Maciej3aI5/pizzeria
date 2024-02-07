@@ -1,10 +1,14 @@
+let galeria_licznik=0;
+let menu_licznik=0;
 document.getElementById('menu').addEventListener("click", () => {
     document.getElementById('content').style.display="none";
     document.getElementById('content3').style.display="none";
     document.getElementById('content2').style.display="grid";
+    if(menu_licznik==0)
     for(let i=0;i<15;i++){
         const danie = new Danie("Pizza Margheritta","Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate mollitia aperiam at ipsa unde provident minus, aliquid fugiat. Expedita, nisi?",35);
         danie.tworzenie();
+        menu_licznik=1;
     }
 });
 document.getElementById('pizza').addEventListener("click", () => {
@@ -16,6 +20,7 @@ document.getElementById('galeria').addEventListener("click", () => {
     document.getElementById('content').style.display="none";
     document.getElementById('content2').style.display="none";
     document.getElementById('content3').style.display="grid";
+    if(galeria_licznik==0)
     for(let j=0;j<9;j++)
     {
         for(let i=0;i<4;i++)
@@ -25,8 +30,24 @@ document.getElementById('galeria').addEventListener("click", () => {
         }
         const zdjecie = new Zdjecie("pizza.jpg","rozmiar2");
         zdjecie.dodajZdjecie();
+        galeria_licznik=1;
     }
 });
+document.getElementById('select').addEventListener("change",(event)=>{
+    console.log('Nowa wartość:', event.target.value);
+    if(event.target.value=="MENU")
+    {
+        document.getElementById('menu').click();
+    }
+    if(event.target.value=="PIZZERIA")
+    {
+        document.getElementById('pizza').click();
+    }
+    if(event.target.value=="GALERIA")
+    {
+        document.getElementById('galeria').click();
+    }
+})
 class Danie{
     constructor(nazwa,tresc,cena){
         this.nazwa = document.createElement('div');
